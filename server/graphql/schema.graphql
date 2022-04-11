@@ -1,9 +1,9 @@
-type {
-    name: String!,
-    age: Int!,
-    gender: String!
+type Bloxxom {
+  name: String!
+  age: Int!
+  gender: String!
 }
 
 type Query {
-    person: String!
+  person: Bloxxom!
 }
