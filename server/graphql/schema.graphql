@@ -1,9 +1,14 @@
-type Bloxxom {
+type Movie {
+  id: Int!
   name: String!
-  age: Int!
-  gender: String!
+  score: Int!
 }
 
 type Query {
-  person: Bloxxom!
+  movies: [Movie]!
+  movie(id: Int!): Movie
+}
+
+type Mutation {
+  addMovie(name: String!, score: Int!): Movie!
 }

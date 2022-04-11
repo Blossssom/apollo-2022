@@ -1,12 +1,8 @@
-// const bloxxom = {
-//     name: "bloxxom",
-//     age: 18,
-//     gender: "male"
-// };
+import {getMovies} from "./db";
 
 const resolvers = {
     Query: {
-        person: () => "test"
+        movies: () => getMovies()
     }
 };
 
