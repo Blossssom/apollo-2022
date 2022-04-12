@@ -9,14 +9,19 @@ const server = createServer({
             rating: Float!
             summary: String!
             medium_cover_image: String!
+            genres: [String!]
           }
           
           type Query {
-            movies: [Movie]!
+            movies(limit: Int!, rating: Float!): [Movie]!
+            movie(id: Int!): Movie
+            suggestions(id: Int!): [Movie]!
           }
           `,
         resolvers: resolvers
     }
 });
+
+
 
 server.start();
