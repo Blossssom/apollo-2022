@@ -8,6 +8,7 @@
     "@babel/core": "^7.17.9",
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
+    "concurrently": "^7.1.0",
     "fetch": "^1.1.0",
     "graphql-yoga": "^2.1.0",
     "install": "^0.13.0",
@@ -15,7 +16,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon --exec babel-node ./server/server.js"
+    "server": "nodemon --exec babel-node ./server/server.js",
+    "start": "cd client && npm start",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start\""
   },
   "repository": {
     "type": "git",
