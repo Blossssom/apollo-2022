@@ -6,10 +6,11 @@ const server = createServer({
         typeDefs: `type Movie {
             id: Int!
             title: String!
-            rating: Float!
-            summary: String!
-            medium_cover_image: String!
-            genres: [String!]
+            rating: Float
+            language: String
+            medium_cover_image: String
+            description_intro: String
+            genres: [String]
           }
           
           type Query {
