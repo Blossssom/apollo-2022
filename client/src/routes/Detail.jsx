@@ -75,7 +75,7 @@ const Detail = () => {
                     {
                         loading
                         ? "Loading..."
-                        : data.movie.title
+                        : `${data.movie.title} ${data.movie.isLiked ? "❤" : "🤔"}`
                     }
                 </Title>
                 {
